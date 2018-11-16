@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Yoga flow resource:
+
+  # CREATE
+  get("/yoga_flows/new", { :controller => "yoga_flows", :action => "new_form" })
+  post("/create_yoga_flow", { :controller => "yoga_flows", :action => "create_row" })
+
+  # READ
+  get("/yoga_flows", { :controller => "yoga_flows", :action => "index" })
+  get("/yoga_flows/:id_to_display", { :controller => "yoga_flows", :action => "show" })
+
+  # UPDATE
+  get("/yoga_flows/:prefill_with_id/edit", { :controller => "yoga_flows", :action => "edit_form" })
+  post("/update_yoga_flow/:id_to_modify", { :controller => "yoga_flows", :action => "update_row" })
+
+  # DELETE
+  get("/delete_yoga_flow/:id_to_remove", { :controller => "yoga_flows", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Pose resource:
 
   # CREATE

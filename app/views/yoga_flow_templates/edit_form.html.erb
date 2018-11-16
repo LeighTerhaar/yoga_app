@@ -1,0 +1,92 @@
+<h1>
+  Edit yoga flow #<%= @yoga_flow.id %>
+</h1>
+
+<hr>
+
+<!-- Form yoga_flow start -->
+<form action="/update_yoga_flow/<%= @yoga_flow.id %>" method="post">
+<!-- Form yoga_flow end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control" value="<%= @yoga_flow.name %>">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <!-- Label and input for intention start -->
+  <div class="form-group">
+    <label for="intention">
+      Intention
+    </label>
+
+    <!-- Input for intention start -->
+    <input type="text" id="intention" name="intention" class="form-control" value="<%= @yoga_flow.intention %>">
+    <!-- Input for intention end -->
+  </div>
+  <!-- Label and input for intention end -->
+
+  <!-- Label and input for pose_id start -->
+  <div class="form-group">
+    <label for="pose_id">
+      Pose
+    </label>
+
+    <!-- Input for pose_id start -->
+    <input type="text" id="pose_id" name="pose_id" class="form-control" value="<%= @yoga_flow.pose_id %>">
+    <!-- Input for pose_id end -->
+  </div>
+  <!-- Label and input for pose_id end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @yoga_flow.user_id %>">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for description start -->
+  <div class="form-group">
+    <label for="description">
+      Description
+    </label>
+
+    <!-- Input for description start -->
+    <input type="text" id="description" name="description" class="form-control" value="<%= @yoga_flow.description %>">
+    <!-- Input for description end -->
+  </div>
+  <!-- Label and input for description end -->
+
+  <!-- Label and input for yoga_type start -->
+  <div class="form-group">
+    <label for="yoga_type">
+      Yoga type
+    </label>
+
+    <!-- Input for yoga_type start -->
+    <input type="text" id="yoga_type" name="yoga_type" class="form-control" value="<%= @yoga_flow.yoga_type %>">
+    <!-- Input for yoga_type end -->
+  </div>
+  <!-- Label and input for yoga_type end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update yoga flow
+  </button>
+</form>
+
+<hr>
+
+<a href="/yoga_flows">
+  Go back
+</a>

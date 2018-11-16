@@ -1,0 +1,132 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All yoga flows
+    </h1>
+
+    <a href="/yoga_flows/new" class="btn btn-block btn-outline-secondary">
+      Add a new yoga flow
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Name
+        </th>
+
+        <th>
+          Intention
+        </th>
+
+        <th>
+          Pose
+        </th>
+
+        <th>
+          User
+        </th>
+
+        <th>
+          Description
+        </th>
+
+        <th>
+          Yoga type
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @yoga_flows.each do |yoga_flow| %>
+      <tr>
+        <!-- Display yoga_flow.id start -->
+        <td>
+          <%= yoga_flow.id %>
+        </td>
+        <!-- Display yoga_flow.id end -->
+
+        <!-- Display yoga_flow.name start -->
+        <td>
+          <%= yoga_flow.name %>
+        </td>
+        <!-- Display yoga_flow.name end -->
+
+        <!-- Display yoga_flow.intention start -->
+        <td>
+          <%= yoga_flow.intention %>
+        </td>
+        <!-- Display yoga_flow.intention end -->
+
+        <!-- Display yoga_flow.pose_id start -->
+        <td>
+          <%= yoga_flow.pose_id %>
+        </td>
+        <!-- Display yoga_flow.pose_id end -->
+
+        <!-- Display yoga_flow.user_id start -->
+        <td>
+          <%= yoga_flow.user_id %>
+        </td>
+        <!-- Display yoga_flow.user_id end -->
+
+        <!-- Display yoga_flow.description start -->
+        <td>
+          <%= yoga_flow.description %>
+        </td>
+        <!-- Display yoga_flow.description end -->
+
+        <!-- Display yoga_flow.yoga_type start -->
+        <td>
+          <%= yoga_flow.yoga_type %>
+        </td>
+        <!-- Display yoga_flow.yoga_type end -->
+
+        <!-- Display yoga_flow.created_at start -->
+        <td>
+          <%= time_ago_in_words(yoga_flow.created_at) %> ago
+        </td>
+        <!-- Display yoga_flow.created_at end -->
+
+        <!-- Display yoga_flow.updated_at start -->
+        <td>
+          <%= time_ago_in_words(yoga_flow.updated_at) %> ago
+        </td>
+        <!-- Display yoga_flow.updated_at end -->
+
+        <td>
+          <a href="/yoga_flows/<%= yoga_flow.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

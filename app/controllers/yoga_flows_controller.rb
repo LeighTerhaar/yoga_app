@@ -61,6 +61,14 @@ class YogaFlowsController < ApplicationController
     end
   end
 
+  def destroy_row_from_user
+    @yoga_flow = YogaFlow.find(params.fetch("id_to_remove"))
+
+    @yoga_flow.destroy
+
+    redirect_to("/users/#{@yoga_flow.user_id}", notice: "YogaFlow deleted successfully.")
+  end
+
   def destroy_row
     @yoga_flow = YogaFlow.find(params.fetch("id_to_remove"))
 

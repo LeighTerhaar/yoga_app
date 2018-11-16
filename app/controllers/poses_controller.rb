@@ -63,6 +63,38 @@ class PosesController < ApplicationController
     end
   end
 
+  def destroy_row_from_flow
+    @pose = Pose.find(params.fetch("id_to_remove"))
+
+    @pose.destroy
+
+    redirect_to("/yoga_flows/#{@pose.sequence_id}", notice: "Pose deleted successfully.")
+  end
+
+  def destroy_row_from_sun_a
+    @pose = Pose.find(params.fetch("id_to_remove"))
+
+    @pose.destroy
+
+    redirect_to("/sun_as/#{@pose.sun_a_id}", notice: "Pose deleted successfully.")
+  end
+
+  def destroy_row_from_sun_b
+    @pose = Pose.find(params.fetch("id_to_remove"))
+
+    @pose.destroy
+
+    redirect_to("/sun_bs/#{@pose.sun_b_id}", notice: "Pose deleted successfully.")
+  end
+
+  def destroy_row_from_sun_c
+    @pose = Pose.find(params.fetch("id_to_remove"))
+
+    @pose.destroy
+
+    redirect_to("/sun_cs/#{@pose.sun_c_id}", notice: "Pose deleted successfully.")
+  end
+
   def destroy_row
     @pose = Pose.find(params.fetch("id_to_remove"))
 

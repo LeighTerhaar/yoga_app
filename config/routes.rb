@@ -75,6 +75,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_yoga_flow/:id_to_remove", { :controller => "yoga_flows", :action => "destroy_row" })
+  get("/delete_yoga_flow_from_user/:id_to_remove", { :controller => "yoga_flows", :action => "destroy_row_from_user" })
 
   #------------------------------
 
@@ -94,6 +95,10 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_pose/:id_to_remove", { :controller => "poses", :action => "destroy_row" })
+  get("/delete_pose_from_sun_c/:id_to_remove", { :controller => "poses", :action => "destroy_row_from_sun_c" })
+  get("/delete_pose_from_sun_b/:id_to_remove", { :controller => "poses", :action => "destroy_row_from_sun_b" })
+  get("/delete_pose_from_sun_a/:id_to_remove", { :controller => "poses", :action => "destroy_row_from_sun_a" })
+  get("/delete_pose_from_flow/:id_to_remove", { :controller => "poses", :action => "destroy_row_from_flow" })
 
   #------------------------------
 

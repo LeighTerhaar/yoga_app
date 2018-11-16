@@ -50,7 +50,7 @@
     </label>
 
     <!-- Input for sun_a_id start -->
-    <input type="text" id="sun_a_id" name="sun_a_id" class="form-control" value="<%= @pose.sun_a_id %>">
+    <%= select_tag(:sun_a_id, options_from_collection_for_select(SunA.all, :id, :created_at, @pose.sun_a_id), :class => "form-control") %>
     <!-- Input for sun_a_id end -->
   </div>
   <!-- Label and input for sun_a_id end -->

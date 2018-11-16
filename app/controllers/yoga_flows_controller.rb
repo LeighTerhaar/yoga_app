@@ -49,7 +49,7 @@ class YogaFlowsController < ApplicationController
     @yoga_flow.name = params.fetch("name")
     @yoga_flow.intention = params.fetch("intention")
     @yoga_flow.pose_id = params.fetch("pose_id")
-    @yoga_flow.user_id = params.fetch("user_id")
+    
     @yoga_flow.description = params.fetch("description")
     @yoga_flow.yoga_type = params.fetch("yoga_type")
 

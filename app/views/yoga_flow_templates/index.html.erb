@@ -92,7 +92,11 @@
 
         <!-- Display yoga_flow.user_id start -->
         <td>
-          <%= yoga_flow.user.email %>
+          <% if yoga_flow.user.present? %>
+            <a href="/users/<%= yoga_flow.user.id %>">
+              <%= yoga_flow.user.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display yoga_flow.user_id end -->
 

@@ -90,7 +90,11 @@
 
         <!-- Display pose.sequence_id start -->
         <td>
-          <%= pose.flow.name %>
+          <% if pose.flow.present? %>
+            <a href="/yoga_flows/<%= pose.flow.id %>">
+              <%= pose.flow.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display pose.sequence_id end -->
 
@@ -102,19 +106,31 @@
 
         <!-- Display pose.sun_a_id start -->
         <td>
-          <%= pose.sun_a.created_at %>
+          <% if pose.sun_a.present? %>
+            <a href="/sun_as/<%= pose.sun_a.id %>">
+              <%= pose.sun_a.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display pose.sun_a_id end -->
 
         <!-- Display pose.sun_b_id start -->
         <td>
-          <%= pose.sun_b.created_at %>
+          <% if pose.sun_b.present? %>
+            <a href="/sun_bs/<%= pose.sun_b.id %>">
+              <%= pose.sun_b.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display pose.sun_b_id end -->
 
         <!-- Display pose.sun_c_id start -->
         <td>
-          <%= pose.sun_c.created_at %>
+          <% if pose.sun_c.present? %>
+            <a href="/sun_cs/<%= pose.sun_c.id %>">
+              <%= pose.sun_c.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display pose.sun_c_id end -->
 

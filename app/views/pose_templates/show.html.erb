@@ -52,7 +52,11 @@
       </dt>
       <!-- Display sequence_id start -->
       <dd>
-        <%= @pose.sequence_id %>
+        <% if @pose.flow.present? %>
+          <a href="/yoga_flows/<%= @pose.sequence_id %>">
+            <%= @pose.flow.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display sequence_id end -->
 
@@ -70,7 +74,11 @@
       </dt>
       <!-- Display sun_a_id start -->
       <dd>
-        <%= @pose.sun_a_id %>
+        <% if @pose.sun_a.present? %>
+          <a href="/sun_as/<%= @pose.sun_a_id %>">
+            <%= @pose.sun_a.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display sun_a_id end -->
 
@@ -79,7 +87,11 @@
       </dt>
       <!-- Display sun_b_id start -->
       <dd>
-        <%= @pose.sun_b_id %>
+        <% if @pose.sun_b.present? %>
+          <a href="/sun_bs/<%= @pose.sun_b_id %>">
+            <%= @pose.sun_b.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display sun_b_id end -->
 
@@ -88,7 +100,11 @@
       </dt>
       <!-- Display sun_c_id start -->
       <dd>
-        <%= @pose.sun_c_id %>
+        <% if @pose.sun_c.present? %>
+          <a href="/sun_cs/<%= @pose.sun_c_id %>">
+            <%= @pose.sun_c.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display sun_c_id end -->
 

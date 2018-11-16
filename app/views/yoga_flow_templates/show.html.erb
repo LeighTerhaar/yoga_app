@@ -65,7 +65,11 @@
       </dt>
       <!-- Display user_id start -->
       <dd>
-        <%= @yoga_flow.user_id %>
+        <% if @yoga_flow.user.present? %>
+          <a href="/users/<%= @yoga_flow.user_id %>">
+            <%= @yoga_flow.user.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display user_id end -->
 

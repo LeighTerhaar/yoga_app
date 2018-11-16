@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "poses#index"
   # Routes for the Sun c resource:
 
   # CREATE

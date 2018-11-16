@@ -4,6 +4,8 @@ RSpec.describe Pose, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:sun_c) }
+
     it { should belong_to(:sun_b) }
 
     it { should belong_to(:sun_a) }

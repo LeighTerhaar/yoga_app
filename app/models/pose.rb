@@ -1,6 +1,10 @@
 class Pose < ApplicationRecord
   # Direct associations
 
+  belongs_to :sun_c,
+             :required => false,
+             :counter_cache => true
+
   belongs_to :sun_b,
              :required => false,
              :counter_cache => true

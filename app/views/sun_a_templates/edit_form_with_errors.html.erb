@@ -1,0 +1,29 @@
+<!-- Validation failure messages -->
+<% if @sun_a.errors.any? %>
+  <% @sun_a.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit sun a #<%= @sun_a.id %>
+</h1>
+
+<hr>
+
+<!-- Form sun_a start -->
+<form action="/update_sun_a/<%= @sun_a.id %>" method="post">
+<!-- Form sun_a end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update sun a
+  </button>
+</form>
+
+<hr>
+
+<a href="/sun_as">
+  Go back
+</a>

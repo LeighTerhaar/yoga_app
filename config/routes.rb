@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Sun a resource:
+
+  # CREATE
+  get("/sun_as/new", { :controller => "sun_as", :action => "new_form" })
+  post("/create_sun_a", { :controller => "sun_as", :action => "create_row" })
+
+  # READ
+  get("/sun_as", { :controller => "sun_as", :action => "index" })
+  get("/sun_as/:id_to_display", { :controller => "sun_as", :action => "show" })
+
+  # UPDATE
+  get("/sun_as/:prefill_with_id/edit", { :controller => "sun_as", :action => "edit_form" })
+  post("/update_sun_a/:id_to_modify", { :controller => "sun_as", :action => "update_row" })
+
+  # DELETE
+  get("/delete_sun_a/:id_to_remove", { :controller => "sun_as", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Yoga flow resource:
 
   # CREATE

@@ -1,6 +1,7 @@
 class PosesController < ApplicationController
   def index
-    @poses = Pose.page(params[:page]).per(10)
+    @q = Pose.ransack(params[:q])
+    @poses = @q.result(:distinct => true).includes(:flow, :sun_a, :sun_b, :sun_c).page(params[:page]).per(10)
 
     render("pose_templates/index.html.erb")
   end

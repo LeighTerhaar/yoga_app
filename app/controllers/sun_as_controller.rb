@@ -1,6 +1,7 @@
 class SunAsController < ApplicationController
   def index
-    @sun_as = SunA.page(params[:page]).per(10)
+    @q = SunA.ransack(params[:q])
+    @sun_as = @q.result(:distinct => true).includes(:poses).page(params[:page]).per(10)
 
     render("sun_a_templates/index.html.erb")
   end

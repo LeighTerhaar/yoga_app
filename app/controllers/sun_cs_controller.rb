@@ -1,6 +1,7 @@
 class SunCsController < ApplicationController
   def index
-    @sun_cs = SunC.page(params[:page]).per(10)
+    @q = SunC.ransack(params[:q])
+    @sun_cs = @q.result(:distinct => true).includes(:poses).page(params[:page]).per(10)
 
     render("sun_c_templates/index.html.erb")
   end

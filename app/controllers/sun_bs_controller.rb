@@ -1,6 +1,7 @@
 class SunBsController < ApplicationController
   def index
-    @sun_bs = SunB.page(params[:page]).per(10)
+    @q = SunB.ransack(params[:q])
+    @sun_bs = @q.result(:distinct => true).includes(:poses).page(params[:page]).per(10)
 
     render("sun_b_templates/index.html.erb")
   end

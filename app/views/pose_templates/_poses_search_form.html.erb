@@ -1,0 +1,194 @@
+<%= search_form_for @q, :class => collapse_search_form, :id => "poses_filters" do |f| %>
+  <p class="lead">Narrow results:</p>
+
+  <div class="form-group">
+    <%= f.label :english_name_cont, "English name contains" %>
+    <%= f.text_field :english_name_cont, :class => "form-control", :placeholder => "English name contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :picture_cont, "Picture contains" %>
+    <%= f.text_field :picture_cont, :class => "form-control", :placeholder => "Picture contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :sanksrit_cont, "Sanksrit contains" %>
+    <%= f.text_field :sanksrit_cont, :class => "form-control", :placeholder => "Sanksrit contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :created_at, "Created at" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <div class='input-group date' id='created_atgteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_gteq, :class => "form-control datetimepicker-input", :placeholder => "Created at greater than or equal to", :data => {:target => '#created_atgteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atgteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='input-group date' id='created_atlteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_lteq, :class => "form-control datetimepicker-input", :placeholder => "Created at less than or equal to", :data => {:target => '#created_atlteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atlteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#created_atgteqPicker').datetimepicker({
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atlteqPicker').datetimepicker({
+              useCurrent: false,
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atgteqPicker').on("dp.change", function (e) {
+              $('#created_atlteqPicker').data("DateTimePicker").minDate(e.date);
+          });
+          $('#created_atlteqPicker').on("dp.change", function (e) {
+              $('#created_atgteqPicker').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+
+  <div class="form-group">
+    <%= f.label :flow_name_cont, "YogaFlow name contains" %>
+    <%= f.text_field :flow_name_cont, :class => "form-control", :placeholder => "YogaFlow name contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :created_at, "SunA Created at" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <div class='input-group date' id='sun_agteqcreated_atPicker' data-target-input="nearest">
+          <%= f.text_field :sun_a_created_at_gteq, :class => "form-control datetimepicker-input", :placeholder => "SunA Created at greater than or equal to", :data => {:target => '#sun_agteqcreated_atPicker'} %>
+          <div class="input-group-append" data-target='#sun_agteqcreated_atPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='input-group date' id='sun_alteqcreated_atPicker' data-target-input="nearest">
+          <%= f.text_field :sun_a_created_at_lteq, :class => "form-control datetimepicker-input", :placeholder => "SunA Created at less than or equal to", :data => {:target => '#sun_alteqcreated_atPicker'} %>
+          <div class="input-group-append" data-target='#sun_alteqcreated_atPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#sun_agteqcreated_atPicker').datetimepicker({
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#sun_alteqcreated_atPicker').datetimepicker({
+              useCurrent: false,
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#sun_agteqcreated_atPicker').on("dp.change", function (e) {
+              $('#sun_alteqcreated_atPicker').data("DateTimePicker").minDate(e.date);
+          });
+          $('#sun_alteqcreated_atPicker').on("dp.change", function (e) {
+              $('#sun_agteqcreated_atPicker').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+  <div class="form-group">
+    <%= f.label :created_at, "SunB Created at" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <div class='input-group date' id='sun_bgteqcreated_atPicker' data-target-input="nearest">
+          <%= f.text_field :sun_b_created_at_gteq, :class => "form-control datetimepicker-input", :placeholder => "SunB Created at greater than or equal to", :data => {:target => '#sun_bgteqcreated_atPicker'} %>
+          <div class="input-group-append" data-target='#sun_bgteqcreated_atPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='input-group date' id='sun_blteqcreated_atPicker' data-target-input="nearest">
+          <%= f.text_field :sun_b_created_at_lteq, :class => "form-control datetimepicker-input", :placeholder => "SunB Created at less than or equal to", :data => {:target => '#sun_blteqcreated_atPicker'} %>
+          <div class="input-group-append" data-target='#sun_blteqcreated_atPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#sun_bgteqcreated_atPicker').datetimepicker({
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#sun_blteqcreated_atPicker').datetimepicker({
+              useCurrent: false,
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#sun_bgteqcreated_atPicker').on("dp.change", function (e) {
+              $('#sun_blteqcreated_atPicker').data("DateTimePicker").minDate(e.date);
+          });
+          $('#sun_blteqcreated_atPicker').on("dp.change", function (e) {
+              $('#sun_bgteqcreated_atPicker').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+  <div class="form-group">
+    <%= f.label :created_at, "SunC Created at" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <div class='input-group date' id='sun_cgteqcreated_atPicker' data-target-input="nearest">
+          <%= f.text_field :sun_c_created_at_gteq, :class => "form-control datetimepicker-input", :placeholder => "SunC Created at greater than or equal to", :data => {:target => '#sun_cgteqcreated_atPicker'} %>
+          <div class="input-group-append" data-target='#sun_cgteqcreated_atPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='input-group date' id='sun_clteqcreated_atPicker' data-target-input="nearest">
+          <%= f.text_field :sun_c_created_at_lteq, :class => "form-control datetimepicker-input", :placeholder => "SunC Created at less than or equal to", :data => {:target => '#sun_clteqcreated_atPicker'} %>
+          <div class="input-group-append" data-target='#sun_clteqcreated_atPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#sun_cgteqcreated_atPicker').datetimepicker({
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#sun_clteqcreated_atPicker').datetimepicker({
+              useCurrent: false,
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#sun_cgteqcreated_atPicker').on("dp.change", function (e) {
+              $('#sun_clteqcreated_atPicker').data("DateTimePicker").minDate(e.date);
+          });
+          $('#sun_clteqcreated_atPicker').on("dp.change", function (e) {
+              $('#sun_cgteqcreated_atPicker').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+
+  <%= f.submit :class => "btn btn-primary btn-block mb-1" %>
+
+  <a href="/poses" class="btn btn-outline-secondary btn-block mb-1">Clear filters</a>
+
+<% end %>
+
+<a class="btn btn-outline-secondary btn-block mb-1" data-toggle="collapse" href="#poses_filters">
+  Show filters
+</a>

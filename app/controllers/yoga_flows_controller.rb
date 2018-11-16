@@ -10,7 +10,8 @@ class YogaFlowsController < ApplicationController
   end
 
   def index
-    @yoga_flows = YogaFlow.page(params[:page]).per(10)
+    @q = YogaFlow.ransack(params[:q])
+    @yoga_flows = @q.result(:distinct => true).includes(:user, :poses).page(params[:page]).per(10)
 
     render("yoga_flow_templates/index.html.erb")
   end

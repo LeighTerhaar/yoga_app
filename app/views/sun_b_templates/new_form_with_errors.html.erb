@@ -1,0 +1,32 @@
+<!-- Validation failure messages -->
+<% if @sun_b.present? %>
+  <% if @sun_b.errors.any? %>
+    <% @sun_b.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new sun b
+</h1>
+
+
+<hr>
+
+<!-- Form sun_b start -->
+<form action="/create_sun_b" method="post">
+<!-- Form sun_b end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create sun b
+  </button>
+</form>
+
+<hr>
+
+<a href="/sun_bs">
+  Go back
+</a>

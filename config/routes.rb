@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Sun c resource:
+
+  # CREATE
+  get("/sun_cs/new", { :controller => "sun_cs", :action => "new_form" })
+  post("/create_sun_c", { :controller => "sun_cs", :action => "create_row" })
+
+  # READ
+  get("/sun_cs", { :controller => "sun_cs", :action => "index" })
+  get("/sun_cs/:id_to_display", { :controller => "sun_cs", :action => "show" })
+
+  # UPDATE
+  get("/sun_cs/:prefill_with_id/edit", { :controller => "sun_cs", :action => "edit_form" })
+  post("/update_sun_c/:id_to_modify", { :controller => "sun_cs", :action => "update_row" })
+
+  # DELETE
+  get("/delete_sun_c/:id_to_remove", { :controller => "sun_cs", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Sun b resource:
 
   # CREATE

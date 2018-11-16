@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :sequences,
+             :class_name => "YogaFlow",
+             :dependent => :destroy
+
   # Indirect associations
 
   # Validations

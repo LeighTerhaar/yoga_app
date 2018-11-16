@@ -11,46 +11,37 @@
         </a>
       </div>
 
-      <!-- Edit link pose start -->
       <div class="col">
         <a href="/poses/<%= @pose.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit pose
         </a>
       </div>
-      <!-- Edit link pose end -->
 
-      <!-- Delete link pose start -->
       <div class="col">
         <a href="/delete_pose/<%= @pose.id %>" class="btn btn-block btn-outline-secondary">
           Delete pose
         </a>
       </div>
-      <!-- Delete link pose end -->
     </div>
 
     <dl>
       <dt>
         English name
       </dt>
-      <!-- Display english_name start -->
       <dd>
         <%= @pose.english_name %>
       </dd>
-      <!-- Display english_name end -->
 
       <dt>
         Sanksrit
       </dt>
-      <!-- Display sanksrit start -->
       <dd>
         <%= @pose.sanksrit %>
       </dd>
-      <!-- Display sanksrit end -->
 
       <dt>
         Sequence
       </dt>
-      <!-- Display sequence_id start -->
       <dd>
         <% if @pose.flow.present? %>
           <a href="/yoga_flows/<%= @pose.sequence_id %>">
@@ -58,21 +49,17 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display sequence_id end -->
 
       <dt>
         Picture
       </dt>
-      <!-- Display picture start -->
       <dd>
         <%= @pose.picture %>
       </dd>
-      <!-- Display picture end -->
 
       <dt>
         Sun a
       </dt>
-      <!-- Display sun_a_id start -->
       <dd>
         <% if @pose.sun_a.present? %>
           <a href="/sun_as/<%= @pose.sun_a_id %>">
@@ -80,12 +67,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display sun_a_id end -->
 
       <dt>
         Sun b
       </dt>
-      <!-- Display sun_b_id start -->
       <dd>
         <% if @pose.sun_b.present? %>
           <a href="/sun_bs/<%= @pose.sun_b_id %>">
@@ -93,12 +78,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display sun_b_id end -->
 
       <dt>
         Sun c
       </dt>
-      <!-- Display sun_c_id start -->
       <dd>
         <% if @pose.sun_c.present? %>
           <a href="/sun_cs/<%= @pose.sun_c_id %>">
@@ -106,28 +89,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display sun_c_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@pose.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@pose.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

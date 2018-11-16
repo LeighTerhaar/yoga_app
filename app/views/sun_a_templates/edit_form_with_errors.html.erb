@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @sun_a.errors.any? %>
   <% @sun_a.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,9 +12,7 @@
 
 <hr>
 
-<!-- Form sun_a start -->
 <form action="/update_sun_a/<%= @sun_a.id %>" method="post">
-<!-- Form sun_a end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update sun a

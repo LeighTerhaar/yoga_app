@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @sun_c.present? %>
   <% if @sun_c.errors.any? %>
     <% @sun_c.errors.full_messages.each do |message| %>
@@ -16,9 +15,7 @@
 
 <hr>
 
-<!-- Form sun_c start -->
 <form action="/create_sun_c" method="post">
-<!-- Form sun_c end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create sun c

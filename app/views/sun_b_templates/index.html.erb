@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "sun_b_templates/sun_bs_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -46,23 +42,17 @@
 
       <% @sun_bs.each do |sun_b| %>
       <tr>
-        <!-- Display sun_b.id start -->
         <td>
           <%= sun_b.id %>
         </td>
-        <!-- Display sun_b.id end -->
 
-        <!-- Display sun_b.created_at start -->
         <td>
           <%= time_ago_in_words(sun_b.created_at) %> ago
         </td>
-        <!-- Display sun_b.created_at end -->
 
-        <!-- Display sun_b.updated_at start -->
         <td>
           <%= time_ago_in_words(sun_b.updated_at) %> ago
         </td>
-        <!-- Display sun_b.updated_at end -->
 
         <td>
           <a href="/sun_bs/<%= sun_b.id %>">

@@ -10,11 +10,9 @@
   <ul class="list-group list-group-flush">
     <% @user.sequences.each do |yoga_flow| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/yoga_flows/<%= yoga_flow.id %>">
           <%= yoga_flow.name %>
         </a>
-        <!-- Show link end -->
 
       </li>
     <% end %>

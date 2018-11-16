@@ -10,26 +10,20 @@
   <ul class="list-group list-group-flush">
     <% @sun_b.poses.each do |pose| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/poses/<%= pose.id %>">
           <%= pose.english_name %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <a href="/delete_pose_from_sun_b/<%= pose.id %>">
           Delete
         </a>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="sun_b_poses_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "sun_b_templates/sun_b_poses_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 

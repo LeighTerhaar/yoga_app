@@ -11,49 +11,39 @@
         </a>
       </div>
 
-      <!-- Edit link sun_c start -->
       <div class="col">
         <a href="/sun_cs/<%= @sun_c.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit sun c
         </a>
       </div>
-      <!-- Edit link sun_c end -->
 
-      <!-- Delete link sun_c start -->
       <div class="col">
         <a href="/delete_sun_c/<%= @sun_c.id %>" class="btn btn-block btn-outline-secondary">
           Delete sun c
         </a>
       </div>
-      <!-- Delete link sun_c end -->
     </div>
 
     <dl>
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@sun_c.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@sun_c.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "sun_c_templates/sun_c_poses" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

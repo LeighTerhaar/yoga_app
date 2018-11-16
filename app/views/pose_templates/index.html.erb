@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "pose_templates/poses_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -74,25 +70,18 @@
 
       <% @poses.each do |pose| %>
       <tr>
-        <!-- Display pose.id start -->
         <td>
           <%= pose.id %>
         </td>
-        <!-- Display pose.id end -->
 
-        <!-- Display pose.english_name start -->
         <td>
           <%= pose.english_name %>
         </td>
-        <!-- Display pose.english_name end -->
 
-        <!-- Display pose.sanksrit start -->
         <td>
           <%= pose.sanksrit %>
         </td>
-        <!-- Display pose.sanksrit end -->
 
-        <!-- Display pose.sequence_id start -->
         <td>
           <% if pose.flow.present? %>
             <a href="/yoga_flows/<%= pose.flow.id %>">
@@ -100,15 +89,11 @@
             </a>
           <% end %>
         </td>
-        <!-- Display pose.sequence_id end -->
 
-        <!-- Display pose.picture start -->
         <td>
           <%= pose.picture %>
         </td>
-        <!-- Display pose.picture end -->
 
-        <!-- Display pose.sun_a_id start -->
         <td>
           <% if pose.sun_a.present? %>
             <a href="/sun_as/<%= pose.sun_a.id %>">
@@ -116,9 +101,7 @@
             </a>
           <% end %>
         </td>
-        <!-- Display pose.sun_a_id end -->
 
-        <!-- Display pose.sun_b_id start -->
         <td>
           <% if pose.sun_b.present? %>
             <a href="/sun_bs/<%= pose.sun_b.id %>">
@@ -126,9 +109,7 @@
             </a>
           <% end %>
         </td>
-        <!-- Display pose.sun_b_id end -->
 
-        <!-- Display pose.sun_c_id start -->
         <td>
           <% if pose.sun_c.present? %>
             <a href="/sun_cs/<%= pose.sun_c.id %>">
@@ -136,19 +117,14 @@
             </a>
           <% end %>
         </td>
-        <!-- Display pose.sun_c_id end -->
 
-        <!-- Display pose.created_at start -->
         <td>
           <%= time_ago_in_words(pose.created_at) %> ago
         </td>
-        <!-- Display pose.created_at end -->
 
-        <!-- Display pose.updated_at start -->
         <td>
           <%= time_ago_in_words(pose.updated_at) %> ago
         </td>
-        <!-- Display pose.updated_at end -->
 
         <td>
           <a href="/poses/<%= pose.id %>">

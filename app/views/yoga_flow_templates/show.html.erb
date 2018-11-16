@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link yoga_flow start -->
       <div class="col">
         <% if current_user == @yoga_flow.user %>
           <a href="/yoga_flows/<%= @yoga_flow.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link yoga_flow end -->
 
-      <!-- Delete link yoga_flow start -->
       <div class="col">
         <% if current_user == @yoga_flow.user %>
           <a href="/delete_yoga_flow/<%= @yoga_flow.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,41 +26,33 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link yoga_flow end -->
     </div>
 
     <dl>
       <dt>
         Name
       </dt>
-      <!-- Display name start -->
       <dd>
         <%= @yoga_flow.name %>
       </dd>
-      <!-- Display name end -->
 
       <dt>
         Intention
       </dt>
-      <!-- Display intention start -->
       <dd>
         <%= @yoga_flow.intention %>
       </dd>
-      <!-- Display intention end -->
 
       <dt>
         Pose
       </dt>
-      <!-- Display pose_id start -->
       <dd>
         <%= @yoga_flow.pose_id %>
       </dd>
-      <!-- Display pose_id end -->
 
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @yoga_flow.user.present? %>
           <a href="/users/<%= @yoga_flow.user_id %>">
@@ -71,51 +60,40 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @yoga_flow.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Yoga type
       </dt>
-      <!-- Display yoga_type start -->
       <dd>
         <%= @yoga_flow.yoga_type %>
       </dd>
-      <!-- Display yoga_type end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@yoga_flow.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@yoga_flow.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "yoga_flow_templates/yoga_flow_poses" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

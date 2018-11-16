@@ -10,26 +10,20 @@
   <ul class="list-group list-group-flush">
     <% @yoga_flow.poses.each do |pose| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/poses/<%= pose.id %>">
           <%= pose.english_name %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <a href="/delete_pose_from_flow/<%= pose.id %>">
           Delete
         </a>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="yoga_flow_poses_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "yoga_flow_templates/yoga_flow_poses_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 

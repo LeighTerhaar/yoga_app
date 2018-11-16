@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @pose.errors.any? %>
   <% @pose.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,93 +12,63 @@
 
 <hr>
 
-<!-- Form pose start -->
 <form action="/update_pose/<%= @pose.id %>" method="post">
-<!-- Form pose end -->
 
-  <!-- Label and input for english_name start -->
   <div class="form-group">
     <label for="english_name">
       English name
     </label>
 
-    <!-- Input for english_name start -->
     <input type="text" id="english_name" name="english_name" class="form-control" value="<%= @pose.english_name %>">
-    <!-- Input for english_name end -->
   </div>
-  <!-- Label and input for english_name end -->
 
-  <!-- Label and input for sanksrit start -->
   <div class="form-group">
     <label for="sanksrit">
       Sanksrit
     </label>
 
-    <!-- Input for sanksrit start -->
     <input type="text" id="sanksrit" name="sanksrit" class="form-control" value="<%= @pose.sanksrit %>">
-    <!-- Input for sanksrit end -->
   </div>
-  <!-- Label and input for sanksrit end -->
 
-  <!-- Label and input for sequence_id start -->
   <div class="form-group">
     <label for="sequence_id">
       Sequence
     </label>
 
-    <!-- Input for sequence_id start -->
     <%= select_tag(:sequence_id, options_from_collection_for_select(YogaFlow.all, :id, :name, @pose.sequence_id), :class => "form-control") %>
-    <!-- Input for sequence_id end -->
   </div>
-  <!-- Label and input for sequence_id end -->
 
-  <!-- Label and input for picture start -->
   <div class="form-group">
     <label for="picture">
       Picture
     </label>
 
-    <!-- Input for picture start -->
     <input type="text" id="picture" name="picture" class="form-control" value="<%= @pose.picture %>">
-    <!-- Input for picture end -->
   </div>
-  <!-- Label and input for picture end -->
 
-  <!-- Label and input for sun_a_id start -->
   <div class="form-group">
     <label for="sun_a_id">
       Sun a
     </label>
 
-    <!-- Input for sun_a_id start -->
     <%= select_tag(:sun_a_id, options_from_collection_for_select(SunA.all, :id, :created_at, @pose.sun_a_id), :class => "form-control") %>
-    <!-- Input for sun_a_id end -->
   </div>
-  <!-- Label and input for sun_a_id end -->
 
-  <!-- Label and input for sun_b_id start -->
   <div class="form-group">
     <label for="sun_b_id">
       Sun b
     </label>
 
-    <!-- Input for sun_b_id start -->
     <%= select_tag(:sun_b_id, options_from_collection_for_select(SunB.all, :id, :created_at, @pose.sun_b_id), :class => "form-control") %>
-    <!-- Input for sun_b_id end -->
   </div>
-  <!-- Label and input for sun_b_id end -->
 
-  <!-- Label and input for sun_c_id start -->
   <div class="form-group">
     <label for="sun_c_id">
       Sun c
     </label>
 
-    <!-- Input for sun_c_id start -->
     <%= select_tag(:sun_c_id, options_from_collection_for_select(SunC.all, :id, :created_at, @pose.sun_c_id), :class => "form-control") %>
-    <!-- Input for sun_c_id end -->
   </div>
-  <!-- Label and input for sun_c_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update pose

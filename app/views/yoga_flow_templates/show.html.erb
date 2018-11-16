@@ -13,17 +13,21 @@
 
       <!-- Edit link yoga_flow start -->
       <div class="col">
-        <a href="/yoga_flows/<%= @yoga_flow.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit yoga flow
-        </a>
+        <% if current_user == @yoga_flow.user %>
+          <a href="/yoga_flows/<%= @yoga_flow.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit yoga_flow
+          </a>
+        <% end %>
       </div>
       <!-- Edit link yoga_flow end -->
 
       <!-- Delete link yoga_flow start -->
       <div class="col">
-        <a href="/delete_yoga_flow/<%= @yoga_flow.id %>" class="btn btn-block btn-outline-secondary">
-          Delete yoga flow
-        </a>
+        <% if current_user == @yoga_flow.user %>
+          <a href="/delete_yoga_flow/<%= @yoga_flow.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete yoga_flow
+          </a>
+        <% end %>
       </div>
       <!-- Delete link yoga_flow end -->
     </div>

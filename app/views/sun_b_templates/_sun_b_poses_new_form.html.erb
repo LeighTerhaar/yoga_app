@@ -1,0 +1,85 @@
+<!-- Form pose start -->
+<form action="/create_pose_from_sun_b" method="post">
+<!-- Form pose end -->
+
+  <!-- Label and input for english_name start -->
+  <div class="form-group">
+    <label for="english_name">
+      English name
+    </label>
+
+    <!-- Input for english_name start -->
+    <input type="text" id="english_name" name="english_name" class="form-control" value="<%= @pose.english_name %>">
+    <!-- Input for english_name end -->
+  </div>
+  <!-- Label and input for english_name end -->
+
+  <!-- Label and input for sanksrit start -->
+  <div class="form-group">
+    <label for="sanksrit">
+      Sanksrit
+    </label>
+
+    <!-- Input for sanksrit start -->
+    <input type="text" id="sanksrit" name="sanksrit" class="form-control" value="<%= @pose.sanksrit %>">
+    <!-- Input for sanksrit end -->
+  </div>
+  <!-- Label and input for sanksrit end -->
+
+  <!-- Label and input for sequence_id start -->
+  <div class="form-group">
+    <label for="sequence_id">
+      Sequence
+    </label>
+
+    <!-- Input for sequence_id start -->
+    <input type="text" id="sequence_id" name="sequence_id" class="form-control" value="<%= @pose.sequence_id %>">
+    <!-- Input for sequence_id end -->
+  </div>
+  <!-- Label and input for sequence_id end -->
+
+  <!-- Label and input for picture start -->
+  <div class="form-group">
+    <label for="picture">
+      Picture
+    </label>
+
+    <!-- Input for picture start -->
+    <input type="text" id="picture" name="picture" class="form-control" value="<%= @pose.picture %>">
+    <!-- Input for picture end -->
+  </div>
+  <!-- Label and input for picture end -->
+
+  <!-- Label and input for sun_a_id start -->
+  <div class="form-group">
+    <label for="sun_a_id">
+      Sun a
+    </label>
+
+    <!-- Input for sun_a_id start -->
+    <input type="text" id="sun_a_id" name="sun_a_id" class="form-control" value="<%= @pose.sun_a_id %>">
+    <!-- Input for sun_a_id end -->
+  </div>
+  <!-- Label and input for sun_a_id end -->
+
+  <!-- Label and input for sun_b_id start -->
+  <!-- Input for sun_b_id start -->
+  <input type="hidden" name="sun_b_id" value="<%= @sun_b.id %>">
+  <!-- Input for sun_b_id end -->
+
+  <!-- Label and input for sun_c_id start -->
+  <div class="form-group">
+    <label for="sun_c_id">
+      Sun c
+    </label>
+
+    <!-- Input for sun_c_id start -->
+    <input type="text" id="sun_c_id" name="sun_c_id" class="form-control" value="<%= @pose.sun_c_id %>">
+    <!-- Input for sun_c_id end -->
+  </div>
+  <!-- Label and input for sun_c_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create pose
+  </button>
+</form>

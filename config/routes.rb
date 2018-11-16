@@ -84,6 +84,10 @@ Rails.application.routes.draw do
   # CREATE
   get("/poses/new", { :controller => "poses", :action => "new_form" })
   post("/create_pose", { :controller => "poses", :action => "create_row" })
+  post("/create_pose_from_sun_c", { :controller => "poses", :action => "create_row_from_sun_c" })
+  post("/create_pose_from_sun_b", { :controller => "poses", :action => "create_row_from_sun_b" })
+  post("/create_pose_from_sun_a", { :controller => "poses", :action => "create_row_from_sun_a" })
+  post("/create_pose_from_yoga_flow", { :controller => "poses", :action => "create_row_from_yoga_flow" })
 
   # READ
   get("/poses", { :controller => "poses", :action => "index" })

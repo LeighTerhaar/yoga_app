@@ -6,6 +6,7 @@ class SunCsController < ApplicationController
   end
 
   def show
+    @pose = Pose.new
     @sun_c = SunC.find(params.fetch("id_to_display"))
 
     render("sun_c_templates/show.html.erb")

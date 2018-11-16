@@ -6,6 +6,7 @@ class YogaFlowsController < ApplicationController
   end
 
   def show
+    @pose = Pose.new
     @yoga_flow = YogaFlow.find(params.fetch("id_to_display"))
 
     render("yoga_flow_templates/show.html.erb")

@@ -37,6 +37,86 @@ class PosesController < ApplicationController
     end
   end
 
+  def create_row_from_yoga_flow
+    @pose = Pose.new
+
+    @pose.english_name = params.fetch("english_name")
+    @pose.sanksrit = params.fetch("sanksrit")
+    @pose.sequence_id = params.fetch("sequence_id")
+    @pose.picture = params.fetch("picture")
+    @pose.sun_a_id = params.fetch("sun_a_id")
+    @pose.sun_b_id = params.fetch("sun_b_id")
+    @pose.sun_c_id = params.fetch("sun_c_id")
+
+    if @pose.valid?
+      @pose.save
+
+      redirect_to("/yoga_flows/#{@pose.sequence_id}", notice: "Pose created successfully.")
+    else
+      render("pose_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_sun_a
+    @pose = Pose.new
+
+    @pose.english_name = params.fetch("english_name")
+    @pose.sanksrit = params.fetch("sanksrit")
+    @pose.sequence_id = params.fetch("sequence_id")
+    @pose.picture = params.fetch("picture")
+    @pose.sun_a_id = params.fetch("sun_a_id")
+    @pose.sun_b_id = params.fetch("sun_b_id")
+    @pose.sun_c_id = params.fetch("sun_c_id")
+
+    if @pose.valid?
+      @pose.save
+
+      redirect_to("/sun_as/#{@pose.sun_a_id}", notice: "Pose created successfully.")
+    else
+      render("pose_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_sun_b
+    @pose = Pose.new
+
+    @pose.english_name = params.fetch("english_name")
+    @pose.sanksrit = params.fetch("sanksrit")
+    @pose.sequence_id = params.fetch("sequence_id")
+    @pose.picture = params.fetch("picture")
+    @pose.sun_a_id = params.fetch("sun_a_id")
+    @pose.sun_b_id = params.fetch("sun_b_id")
+    @pose.sun_c_id = params.fetch("sun_c_id")
+
+    if @pose.valid?
+      @pose.save
+
+      redirect_to("/sun_bs/#{@pose.sun_b_id}", notice: "Pose created successfully.")
+    else
+      render("pose_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_sun_c
+    @pose = Pose.new
+
+    @pose.english_name = params.fetch("english_name")
+    @pose.sanksrit = params.fetch("sanksrit")
+    @pose.sequence_id = params.fetch("sequence_id")
+    @pose.picture = params.fetch("picture")
+    @pose.sun_a_id = params.fetch("sun_a_id")
+    @pose.sun_b_id = params.fetch("sun_b_id")
+    @pose.sun_c_id = params.fetch("sun_c_id")
+
+    if @pose.valid?
+      @pose.save
+
+      redirect_to("/sun_cs/#{@pose.sun_c_id}", notice: "Pose created successfully.")
+    else
+      render("pose_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @pose = Pose.find(params.fetch("prefill_with_id"))
 

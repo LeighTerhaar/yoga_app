@@ -4,6 +4,8 @@ RSpec.describe Pose, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:sun_a) }
+
     it { should belong_to(:flow) }
 
     end

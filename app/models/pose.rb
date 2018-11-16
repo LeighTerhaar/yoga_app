@@ -1,6 +1,10 @@
 class Pose < ApplicationRecord
   # Direct associations
 
+  belongs_to :sun_a,
+             :required => false,
+             :counter_cache => true
+
   belongs_to :flow,
              :required => false,
              :class_name => "YogaFlow",

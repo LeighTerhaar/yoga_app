@@ -1,6 +1,6 @@
 class SunBsController < ApplicationController
   def index
-    @sun_bs = SunB.all
+    @sun_bs = SunB.page(params[:page]).per(10)
 
     render("sun_b_templates/index.html.erb")
   end

@@ -1,6 +1,6 @@
 class SunAsController < ApplicationController
   def index
-    @sun_as = SunA.all
+    @sun_as = SunA.page(params[:page]).per(10)
 
     render("sun_a_templates/index.html.erb")
   end

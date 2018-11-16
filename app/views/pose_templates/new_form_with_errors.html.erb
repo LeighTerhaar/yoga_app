@@ -51,7 +51,7 @@
     </label>
 
     <!-- Input for sequence_id start -->
-    <input type="text" id="sequence_id" name="sequence_id" class="form-control" value="<%= @pose.sequence_id %>">
+    <%= select_tag(:sequence_id, options_from_collection_for_select(YogaFlow.all, :id, :name, @pose.sequence_id), :class => "form-control") %>
     <!-- Input for sequence_id end -->
   </div>
   <!-- Label and input for sequence_id end -->
